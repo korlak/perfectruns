@@ -1,3 +1,6 @@
+<?php
+$this->Title = "Список вікі";
+?>
 <a href="">Terraria</a><br>
 <a href="">Elden Ring</a><br>
 <a href="">Geometry Dash</a><br>

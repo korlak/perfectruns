@@ -2,16 +2,13 @@
 
 namespace controllers;
 
+use core\Controller;
 use core\Template;
 
-class CategoryController
+class CategoryController extends Controller
 {
     public function actionIndex()
     {
-        $template = new Template('views/category/index.php');
-        return [
-            'Content' => $template->getHTML(),
-            'Title' => 'Category games'
-        ];
+        return $this->render();
     }
 }

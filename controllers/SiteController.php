@@ -1,16 +1,13 @@
 <?php
 
 namespace controllers;
+use core\Controller;
 use core\Template;
-class SiteController
+class SiteController extends Controller
 {
     public function actionIndex()
     {
-        $template = new Template('views/site/index.php');
-        return [
-            'Content' => $template->getHTML(),
-            'Title' => 'MAIN'
-        ];
+        return $this->render();
     }
 
 

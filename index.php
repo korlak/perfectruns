@@ -1,5 +1,7 @@
 <?php
 //автопідключення классів
+
+
 spl_autoload_register(static function ($className) {
     $path = str_replace('\\', '/', $className.'.php');
     if(file_exists($path))
@@ -11,9 +13,8 @@ if(isset($_GET['route']))
     $route = $_GET['route'];
 else
     $route = '';
-
-
+\core\Config::get()->dbLogin;
+$core = \core\Core::get();
 //передача адреси в класс з роутингом
-$router = new core\Router($route);
-$router->run();
-$router->finish();
+$core->run($route);
+$core->finish();

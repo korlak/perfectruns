@@ -6,6 +6,10 @@ class Template
 {
     protected $templateFilePath;
     protected $paramsArray;
+    public function __set($name, $value)
+    {
+        Core::get()->template->setParam($name, $value);
+    }
 
     public function __construct($templateFilePath)
     {
@@ -23,7 +27,10 @@ class Template
             $this->setParam($key, $value);
         }
     }
-
+    public function setTemplateFilePath($path)
+    {
+        $this->templateFilePath = $path;
+    }
     public function getHTML()
     {
         ob_start();

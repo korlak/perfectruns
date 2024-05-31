@@ -1,6 +1,9 @@
 <?php
 /** @var string $Title */
 /** @var string $Content */
+
+$this->Title = "Список вікі";
+
 ?>
 
 <!doctype html>
@@ -19,7 +22,9 @@
     <a href="http://perfectruns/">Logotype link</a>
     <a href="http://perfectruns/category">Category games</a>
     <a href="http://perfectruns/games">All games</a>
-    <a href="http://perfectruns/games">gamePage</a>
+    <a href="http://perfectruns/wiki/index">Wiki Index</a>
+    <a href="http://perfectruns/wiki/add">Wiki Add</a>
+
 </header>
 <div style="border: 1px solid black;padding: 10px;margin: 10px">
     <?= $Content ?>

@@ -1,33 +1,41 @@
 <?php
 
 namespace controllers;
+
+use core\Controller;
 use core\Template;
-class WikiController
+use core\Core;
+
+class WikiController extends Controller
 {
     public function actionAdd()
     {
-        $template = new Template('views/wiki/add.php');
-        return [
-            'Content' => $template->getHTML(),
-            'Title' => 'Додавання'
-        ];
+        return $this->render();
     }
+
     public function actionIndex()
     {
-        $template = new Template('views/wiki/index.php');
-        return [
-            'Content' => $template->getHTML(),
-            'Title' => 'Wiki 2'
-        ];
-    }
-    public function actionView($params)
-    {
-        $template = new Template('views/wiki/view.php');
-        return [
-            'Content' => 'Wiki Action',
-            'Title' => 'Wiki 1'
-        ];
+        $db = Core::get()->db;
+//        $rows = $db->select("games", ["text", "title", "date"], [
+//            'id' => 2
+//        ]);
+//        var_dump($rows[0]['title']);
+//        $db->insert('games', [
+//                'title' => 'Заголовок',
+//                'text' => 'text',
+//                'short_text' => 'short text',
+//                'date' => '2024.05.03'
+//
+//
+//            ]);
+        // $db->delete('games',['id' => 4]);
+//        $db->update('games', [
+//            'title' => '!!!!!'
+//        ],
+//            [
+//                'id' => 1
+//            ]);
 
+        return $this->render();
     }
-
 }

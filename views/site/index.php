@@ -1,3 +1,7 @@
+
+<?php
+$this->Title = "Список вікі";
+?>
 <p>
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid animi dolor eos ipsum laboriosam, sequi
         similique! Aliquid, assumenda at eaque eveniet inventore ipsa neque numquam placeat tenetur, voluptate

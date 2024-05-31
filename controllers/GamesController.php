@@ -2,16 +2,13 @@
 
 namespace controllers;
 
+use core\Controller;
 use core\Template;
 
-class GamesController
+class GamesController extends Controller
 {
     public function actionIndex()
     {
-        $template = new Template('views/games/index.php');
-        return [
-            'Content' => $template->getHTML(),
-            'Title' => 'All games'
-        ];
+        return $this->render();
     }
 }
