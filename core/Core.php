@@ -10,6 +10,8 @@ class Core
     public $defaultLayoutPath = 'views/layouts/index.php';
     private static $instance;
     public $db;
+    public Controller $controllerObject;
+    public $session;
     private function __construct()
     {
         $this->template = new Template($this->defaultLayoutPath);
@@ -18,12 +20,15 @@ class Core
         $login = Config::get()->dbLogin;
         $password = Config::get()->dbPassword;
         $this->db = new DB($host, $name, $login, $password);
+        $this->session = new Session();
+        session_start();
     }
     public function run($route)
     {
         $this->router = new Router($route);
         $params = $this->router->run();
-        $this->template->setParams($params);
+        if(!empty($params))
+            $this->template->setParams($params);
     }
     public function finish()
     {
