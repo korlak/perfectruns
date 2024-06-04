@@ -3,9 +3,9 @@
 /** @var string $Content */
 
 $this->Title = "Список вікі";
-if(empty($Title))
+if (empty($Title))
     $Title = '';
-if(empty($Content))
+if (empty($Content))
     $Content = '';
 
 ?>
@@ -17,32 +17,60 @@ if(empty($Content))
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/perfectruns/header.css">
+    <link rel="stylesheet" href="../../css/perfectruns/welcome.css">
+    <link rel="stylesheet" href="../../css/perfectruns/gamesList.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title><?= $Title ?></title>
 </head>
 <body>
-<header style="border: 1px solid black;padding: 10px;margin: 10px">
-    HEADER
-    <br>
-    <a href="http://perfectruns/">Logotype link</a>
-    <a href="http://perfectruns/category">Category games</a>
-    <a href="http://perfectruns/games">All games</a>
-    <a href="http://perfectruns/wiki/index">Wiki Index</a>
-    <a href="http://perfectruns/wiki/add">Wiki Add</a>
-    <br>
-    <ul style="text-decoration: none">
-        <li><a href="/users/login">Вхід</a></li>
-        <li><a href="/users/logout">Вихід</a></li>
-        <li><a href="/users/register">Зареєструватись</a></li>
-    </ul>
-    <?php echo "Сесія:"; var_dump($_SESSION)?>
-</header>
-<div style="border: 1px solid black;padding: 10px;margin: 10px">
-    <?= $Content ?>
+<div class="page">
+
+    <header>
+        <div class="header-global">
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+            <div class="link-container">
+                <a class="link-header" href="http://perfectruns/games">Games
+                </a>
+                <a class="link-header" href="http://perfectruns/">Games
+                </a>
+                <a class="link-header" href="http://perfectruns/">Games
+                </a>
+                <a class="link-header" href="http://perfectruns/">Games
+                </a>
+                <a class="link-header" href="http://perfectruns/">Games
+                </a>
+
+                <a class="link-header" href="/Categories/">Categories</a>
+                <a class="link-header" href="/Community/">Community</a>
+            </div>
+            <a class="sign-in" href="/users/login">
+                <div class="sign">
+                    LOG IN
+                </div>
+            </a>
+            <a class="sign-up" href="/users/register">
+                <div class="sign">
+                    REGISTER
+                </div>
+            </a>
+    </header>
+    <div>
+        <!--    --><?php //echo "Сесія:"; var_dump($_SESSION)?>
+    </div>
+    <div>
+        <?= $Content ?>
+    </div>
+    <footer>
+
+
+    </footer>
 </div>
-<footer style="border: 1px solid black;padding: 10px;margin: 10px">FOOTER
 
-
-</footer>
 </body>
 </html>

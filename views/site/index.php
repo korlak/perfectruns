@@ -1,25 +1,47 @@
-
 <?php
-$this->Title = "Список вікі";
+$this->Title = "PerfectRuns";
 ?>
-<p>
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid animi dolor eos ipsum laboriosam, sequi
-        similique! Aliquid, assumenda at eaque eveniet inventore ipsa neque numquam placeat tenetur, voluptate
-        voluptatum.
+<div class="welcome">
+    <div class="welcome-background">
+        <div class="welcome-background-layer">
+            <div class="welcome-word-layer">
+                <div class="welcome-word1">
+                    WELCOME TO PERFECTRUNS
+                </div>
+                <span class="welcome-word2">We have over 1000 guides to help you get achievements for
+                different games</span>
+            </div>
+        </div>
     </div>
-    <div>Assumenda consectetur earum est exercitationem facere fugiat laborum maxime modi omnis, perferendis qui saepe
-        sed similique suscipit, ut! Asperiores cum distinctio facere mollitia pariatur saepe sed suscipit voluptas
-        voluptatibus voluptatum.
+</div>
+
+<div class="gamePages">
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
     </div>
-    <div>Accusamus aspernatur blanditiis dicta doloremque, dolores dolorum error harum, ipsum libero maxime, nostrum
-        similique soluta totam ullam unde vero voluptate voluptatem voluptatibus. Alias consectetur mollitia nisi non
-        optio, quasi vel.
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
     </div>
-    <div>Eius magnam maxime mollitia praesentium! Ad, alias aspernatur doloribus est ex, itaque mollitia nam
-        necessitatibus nesciunt nihil optio, possimus quo sapiente soluta sunt totam voluptate. A neque qui sapiente
-        suscipit.
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
     </div>
-    <div>Ab alias architecto asperiores assumenda, culpa deleniti distinctio dolorem doloribus eos eum, harum ipsa
-        itaque iure laborum libero, modi necessitatibus numquam optio quaerat rem sed soluta tempora unde vero vitae?
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
     </div>
-</p>
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
+    </div>
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
+    </div>
+    <div class="game">
+        <div class="gameImage"></div>
+        <div class="gameName">gameName</div>
+    </div>
+</div>

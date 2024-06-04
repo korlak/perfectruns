@@ -1,6 +1,6 @@
 <?php
 //автопідключення классів
-
+//phpinfo();die;
 spl_autoload_register(static function ($className) {
     $path = str_replace('\\', '/', $className.'.php');
     if(file_exists($path))
@@ -16,4 +16,6 @@ else
 $core = \core\Core::get();
 //передача адреси в класс з роутингом
 $core->run($route);
+
+
 $core->finish();

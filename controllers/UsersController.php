@@ -8,18 +8,29 @@ use http\Client\Curl\User;
 use \models\Users;
 class UsersController extends Controller
 {
-    public function  actionLogin()
+    public function actionLogin()
     {
-        if(Users::IsUserLogged())
+
+        if(Users::IsUserLogged()){
             return $this->redirect('/');
+        }
         if($this->isPost){
+
             $user = Users::FindByLoginAndPassword($this->post->login, $this->post->password);
+
             if(!empty($user)){
                 Users::LoginUser($user);
                 return $this->redirect('/');
             }
-        } else {
+        } else if (!$this->isPost) {
+
+
+        } else
+        {
+
             $this->addErrorMessage('Неправильний логін або пароль');
+            $this->isPost= false;
+            $_POST = null;
         }
         return $this->render();
     }
@@ -56,8 +67,14 @@ class UsersController extends Controller
     }
     public function actionLogout()
     {
-        Users::LogoutUser();
-        return $this->redirect('/users/login');
+        if(Users::IsUserLogged())
+        {
+            Users::LogoutUser();
+            return $this->redirect('/users/login');
+        } else{
+            return $this->redirect('/');
+
+        }
     }
 
 }

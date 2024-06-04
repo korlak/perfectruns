@@ -36,7 +36,12 @@ class Users extends Model
     }
     public static function IsUserLogged()
     {
-        return !empty(Core::get()->session->get('user'));
+        if(is_null(Core::get()->session->get('user'))){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
     public static function LoginUser($user)

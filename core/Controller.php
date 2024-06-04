@@ -37,7 +37,7 @@ class Controller
             'Content' => $this->template->getHTML()
         ];
     }
-    public function redirect($path)
+    public function redirect($path) : void
     {
         header("Location: {$path}");
         die;

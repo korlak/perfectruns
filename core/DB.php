@@ -27,7 +27,7 @@ class DB
                 $parts [] = "{$field} = :{$field}";
             }
             $where_string .= implode(' AND ', $parts);
-            var_dump($where_string);
+
         } else {
             if (is_string($where)) {
                 $where_string = $where;

@@ -16,7 +16,7 @@ class Session
     }
     public function get($name)
     {
-        return $_SESSION[$name];
+        return isset($_SESSION[$name]) ? $_SESSION[$name] : null;
     }
     public  function remove($name)
     {

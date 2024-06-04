@@ -1,0 +1,65 @@
+/* welcome */
+.welcome {
+    font-family: 'Inter';
+    margin-left: 15px;
+    width: 1440px;
+    height: 559px;
+}
+
+/* Backround welcome  */
+.welcome-background {
+    width: 1440px;
+    height: 559px;
+    background: url(/images/welcome/bcg1.jfif) no-repeat center ;
+    background-size: cover;
+
+
+}
+
+
+/* Backround welcome  */
+.welcome-background-layer {
+    width: 1440px;
+    height: 559px;
+
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.welcome-word-layer{
+    height: 550px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* WELCOME TO PERFECTRUNS We have over 1000 guides to help you get achievements for different games */
+.welcome-word1 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.welcome-word2 {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 51px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+/* WELCOME TO PERFECTRUNS We have over 1000 guides to help you get achievements for different games */
+
+
+
+
