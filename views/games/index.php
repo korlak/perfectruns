@@ -1,5 +1,5 @@
 <?php
-$this->Title = "Список вікі";
+$this->Title = "Список ігор";
 ?>
 <a href="">Terraria</a><br>
 <a href="">Elden Ring</a><br>

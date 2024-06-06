@@ -1,0 +1,19 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 1440px;
+    height: 520px;
+    border: 1px solid red;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+    gap: 10px;
+}
+/* login */
+

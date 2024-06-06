@@ -8,6 +8,8 @@ if (empty($Title))
 if (empty($Content))
     $Content = '';
 
+use models\Users;
+
 ?>
 
 <!doctype html>
@@ -21,6 +23,8 @@ if (empty($Content))
     <link rel="stylesheet" href="../../css/perfectruns/header.css">
     <link rel="stylesheet" href="../../css/perfectruns/welcome.css">
     <link rel="stylesheet" href="../../css/perfectruns/gamesList.css">
+    <link rel="stylesheet" href="../../css/users/login.css">
+    <link rel="stylesheet" href="../../css/users/profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -35,39 +39,38 @@ if (empty($Content))
                 <img src="" alt="">
             </div>
             <div class="link-container">
-                <a class="link-header" href="http://perfectruns/games">Games
-                </a>
-                <a class="link-header" href="http://perfectruns/">Games
-                </a>
-                <a class="link-header" href="http://perfectruns/">Games
-                </a>
-                <a class="link-header" href="http://perfectruns/">Games
-                </a>
-                <a class="link-header" href="http://perfectruns/">Games
-                </a>
-
-                <a class="link-header" href="/Categories/">Categories</a>
-                <a class="link-header" href="/Community/">Community</a>
+                <a class="link-header" href="http://perfectruns/">Main Page </a>
+                <a class="link-header" href="http://perfectruns/games">Games </a>
+                <a class="link-header" href="http://perfectruns/users/profile">Profile </a>
+                <a class="link-header" href="http://perfectruns/favorites">Favorites </a>
+                <a class="link-header" href="http://perfectruns/categories">Categories</a>
+                <a class="link-header" href="http://perfectruns/community">Community</a>
             </div>
-            <a class="sign-in" href="/users/login">
-                <div class="sign">
-                    LOG IN
-                </div>
-            </a>
-            <a class="sign-up" href="/users/register">
-                <div class="sign">
-                    REGISTER
-                </div>
-            </a>
+            <?php if (!Users::IsUserLogged()) : ?>
+                <a class="sign-in" href="/users/login">
+                    <div class="sign">
+                        LOG IN
+                    </div>
+                </a>
+                <a class="sign-up" href="/users/register">
+                    <div class="sign">
+                        REGISTER
+                    </div>
+                </a>
+            <?php else : ?>
+                <a class="sign-up" href="/users/logout">
+                    <div class="sign">
+                        Log Out
+                    </div>
+                </a>
+            <?php endif; ?>
+        </div>
+
     </header>
-    <div>
-        <!--    --><?php //echo "Сесія:"; var_dump($_SESSION)?>
-    </div>
     <div>
         <?= $Content ?>
     </div>
     <footer>
-
 
     </footer>
 </div>

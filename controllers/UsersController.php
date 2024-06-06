@@ -8,6 +8,11 @@ use http\Client\Curl\User;
 use \models\Users;
 class UsersController extends Controller
 {
+    public function actionProfile()
+    {
+        return $this->render('');
+
+    }
     public function actionLogin()
     {
 
@@ -19,15 +24,13 @@ class UsersController extends Controller
             $user = Users::FindByLoginAndPassword($this->post->login, $this->post->password);
 
             if(!empty($user)){
+
                 Users::LoginUser($user);
                 return $this->redirect('/');
             }
-        } else if (!$this->isPost) {
-
-
-        } else
+        }
+         else
         {
-
             $this->addErrorMessage('Неправильний логін або пароль');
             $this->isPost= false;
             $_POST = null;
@@ -55,6 +58,7 @@ class UsersController extends Controller
                 $this->addErrorMessage("Нікнейм не вказано");
             }
             if(!$this->isErrorMessageExistis()){
+                var_dump(Users::RegisterUser($this->post->login, $this->post->password, $this->post->nickname));
                 Users::RegisterUser($this->post->login, $this->post->password, $this->post->nickname);
                 return $this->redirect('/users/registersuccess');
             }

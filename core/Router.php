@@ -50,5 +50,6 @@ class Router
     {
         http_response_code($code);
         echo $code;
+        die;
     }
 }

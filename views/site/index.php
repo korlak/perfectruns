@@ -20,28 +20,8 @@ $this->Title = "PerfectRuns";
         <div class="gameImage"></div>
         <div class="gameName">gameName</div>
     </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
+    <?php
+
+
+    ?>
 </div>
