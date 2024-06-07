@@ -16,12 +16,13 @@ $this->Title = "PerfectRuns";
 </div>
 
 <div class="gamePages">
-    <div class="game">
-        <div class="gameImage"></div>
-        <div class="gameName">gameName</div>
-    </div>
     <?php
-
-
+    use core\Core;
+    $arrayGames = Core::get()->db->select('games', '*', '');
+    foreach ($arrayGames as $game) {
+        echo ' <div class="game">' . '<div class="gameImage"></div>';
+        echo ' <div class="gameName">';
+        echo $game['name'] . '</div>' . '</div>';
+    }
     ?>
 </div>

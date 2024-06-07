@@ -38,6 +38,10 @@ class Model
             return null;
         }
     }
+    public static function getAllTable($tableName)
+    {
+
+    }
     public static function findByCondition($conditionAssocArray)
     {
         $arr = Core::get()->db->select(static::$tableName, '*', $conditionAssocArray);

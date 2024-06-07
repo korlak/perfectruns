@@ -13,7 +13,9 @@ class AdminController  extends Controller
     }
     public function actionAddGame()
     {
-        Games::addNewGame($this->post->name, $this->post->title, $this->post->about, $this->post->miniPicture, $this->post->picture);
+        if($this->isPost){
+            Games::addNewGame($this->post->name, $this->post->title, $this->post->about, $this->post->miniPicture, $this->post->picture);
+        }
         return $this->render('views/admin/addGame.php');
 
     }

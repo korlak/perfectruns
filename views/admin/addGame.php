@@ -4,22 +4,22 @@
     <?php endif; ?>
     <div class="container">
         <label for="name"><b>Game name</b></label>
-        <input type="text" placeholder="Game name" name="name" value="<?=$this->controller->post->name ?>" required>
+        <input type="text" placeholder="Game name" name="name" required>
 
 
 
         <label for="title"><b>Game Title</b></label>
-        <input type="text" placeholder="Game title" name="title" value="<?=$this->controller->post->title ?>" required>
+        <input type="text" placeholder="Game title" name="title"  required>
 
 
         <label for="about"><b>Game about</b></label>
-        <input type="text" placeholder="Game about" name="about" value="<?=$this->controller->post->about ?>" required>
+        <input type="text" placeholder="Game about" name="about"required>
 
         <label for="miniPicture"><b>Game miniPicture</b></label>
-        <input type="text" placeholder="Game miniPicture" name="miniPicture" value="<?=$this->controller->post->miniPicture ?>" required>
+        <input type="text" placeholder="Game miniPicture" name="miniPicture" required>
 
         <label for="picture"><b>Game picture</b></label>
-        <input type="text" placeholder="Game picture" name="picture" value="<?=$this->controller->post->picture ?>" required>
+        <input type="text" placeholder="Game picture" name="picture"  required>
 
 
         <button type="submit">Register</button>

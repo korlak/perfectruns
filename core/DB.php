@@ -38,7 +38,7 @@ class DB
         return $where_string;
     }
 
-    public function select($table, $fields, $where)
+    public function select($table, $fields, $where = null)
     {
         if (is_array($fields)) {
             $fields_string = implode(', ', $fields);
@@ -51,8 +51,10 @@ class DB
         $where_string = $this->where($where);
         $sql = "SELECT {$fields_string} FROM {$table} {$where_string}";
         $sth = $this->pdo->prepare($sql);
-        foreach ($where as $key => $value) {
-            $sth->bindValue("{$key}", $value);
+        if (is_null($where)) {
+            foreach ($where as $key => $value) {
+                $sth->bindValue("{$key}", $value);
+            }
         }
         $sth->execute();
         return $sth->fetchAll();
