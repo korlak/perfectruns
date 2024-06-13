@@ -4,6 +4,7 @@ namespace controllers;
 
 use core\Controller;
 use core\Template;
+use models\Games;
 
 class GamesController extends Controller
 {
@@ -11,8 +12,10 @@ class GamesController extends Controller
     {
         return $this->render();
     }
+
     public function actionGamePage()
     {
         return $this->render('views/games/gamePage.php');
+
     }
 }

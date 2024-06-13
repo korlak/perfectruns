@@ -27,10 +27,12 @@ $this->Title = "Список ігор";
     <div class="search"></div>
     <div class="games">
         <?php foreach (Games::getGamesNameAndPic() as $item) : ?>
-        <div class="game">
-            <img src="<?=$item[1] ?>" class="image-game"  alt="Image Not Found">
-            <?= $item[0] ?>
-        </div>
+            <a class="gameLink" href="/games/gamePage/<?= $item[2] ?>">
+                <div class="gameMP">
+                    <img src="<?= $item[1] ?>" class="image-game" alt="Image Not Found">
+                    <div class="gameName"> <?= $item[0] ?></div>
+                </div>
+            </a>
         <?php endforeach; ?>
     </div>
 </div>

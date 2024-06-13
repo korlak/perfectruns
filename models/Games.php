@@ -8,7 +8,6 @@ use core\Model;
  * @property  string $name заголовоку;
  * @property  string $title заголовоку;
  * @property  string $about текст;
- * @property  string $miniPicture короткий текст;
  * @property  string $picture дата;
  */
 class Games extends Model
@@ -23,6 +22,7 @@ class Games extends Model
             return null;
         }
     }
+
     public static function addNewGame($name, $title, $about, $picture){
         $game = new Games();
         $game ->name = $name;
@@ -58,6 +58,7 @@ class Games extends Model
         for ($i = 0; $i < count(self::getAllGames()); $i++){
             $array[$i][0] = self::getAllGames()[$i]["name"];
             $array[$i][1] = self::getAllGames()[$i]["picture"];
+            $array[$i][2] = self::getAllGames()[$i]["id"];
         }
         return $array;
     }

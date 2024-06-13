@@ -16,7 +16,6 @@ class AdminController extends Controller
     {
 
         if ($this->isPost) {
-
             $target_file2 = basename($_FILES["picture"]["name"]);
 
             $pathToGameImages = "images/games/{$this->post->name}";
@@ -32,7 +31,7 @@ class AdminController extends Controller
             }
             move_uploaded_file($_FILES["picture"]["tmp_name"],$pathToGameImages."/".$target_file2);
 
-          //  Games::addNewGame($this->post->name, $this->post->title, $this->post->about, $pathPicture);
+          Games::addNewGame($this->post->name, $this->post->title, $this->post->about, $pathPicture);
         }
         return $this->render('views/admin/addGame.php');
 

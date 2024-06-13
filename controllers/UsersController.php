@@ -32,8 +32,7 @@ class UsersController extends Controller
          else
         {
             $this->addErrorMessage('Неправильний логін або пароль');
-            $this->isPost= false;
-            $_POST = null;
+
         }
         return $this->render();
     }
@@ -63,6 +62,10 @@ class UsersController extends Controller
             }
         }
         return $this->render();
+    }
+    public function isPost()
+    {
+        return $this->isPost;
     }
     public function actionRegistersuccess()
     {

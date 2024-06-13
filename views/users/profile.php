@@ -1,25 +1,9 @@
 <?php
 $this->Title = "Профіль";
+use core\Core;
 ?>
-<div style="display: flex;flex-direction: row;">
-
-    <div>
-
-        <img class="profilePicture" src="<?php ?>#" alt="">
-        <div>userName</div>
-        <div>Edit Profile</div>
-        <div>About</div>
-    </div>
-    <div>
-        <pre>
-
-        <?php
-        var_dump($_SESSION);
-        ?>
-        </pre>
-    </div>
+<div class="centerObject">
+    <div>Логін:<?php echo Core::get()->session->get('user')['login']; ?></div>
+    <div>Нікнейм:<?php echo Core::get()->session->get('user')['nickname']; ?></div>
 </div>
-<?php
-
-?>
 

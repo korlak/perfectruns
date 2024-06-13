@@ -5,7 +5,9 @@ $this->Title = "Логін";
 <div class="login">
     <h1>Log In to <span>PerfectRuns</span></h1>
     <form action="" method="post">
-        <?php if (!empty($error_message)) : ?>
+        <?php
+        if (!empty($error_message)) : ?>
+
             <div class="error-message"><?= $error_message ?></div>
         <?php endif; ?>
         <div class="container">

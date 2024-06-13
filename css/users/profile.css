@@ -4,3 +4,11 @@
     border: 2px solid black;
 }
 
+.centerObject{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}

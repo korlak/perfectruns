@@ -17,3 +17,8 @@ $core = \core\Core::get();
 //передача адреси в класс з роутингом
 $core->run($route);
 $core->finish();
+
+?>
+
+
+

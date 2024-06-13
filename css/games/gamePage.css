@@ -1,0 +1,175 @@
+.gamePage {
+
+    /* Page */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 10px 40px;
+    gap: 40px;
+
+
+}
+
+.title-frame {
+    /* Title */
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 79px;
+
+    height: 136px;
+
+}
+
+.title-logo {
+    width: 200px;
+    height: 100%;
+}
+
+.title-text {
+    width: 1000px;
+    height: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+
+}
+
+.about {
+
+    box-sizing: border-box;
+
+    width:75%;
+    position: relative;
+    height: 341px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 0.07em;
+
+    color: #FFFFFF;
+}
+
+.achievements {
+
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 0px;
+    gap: 10px;
+
+    height: 260px;
+    width: 100%;
+
+    background: #949494;
+    border: 1px solid #000000;
+}
+
+.achiv {
+    /* achive */
+
+    width: 1237px;
+    height: 218px;
+
+    background: #C9C9C9;
+    border: 1px solid #000000;
+
+
+}
+
+.ach-img { /* ach-img */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 115px;
+    height: 115px;
+    left: 20px;
+    top: -90px;
+
+    background: #FF6D6D;
+    border: 1px solid #000000;
+}
+
+.titleAch { /* TitleAch */
+
+    position: relative;
+    width: 901px;
+    height: 29px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+}
+
+.aboutAch { /* AboutAch */
+
+    position: relative;
+    width: 901px;
+    height: 81px;
+    left: 146.5px;
+    top: 35px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+
+}
+
+.btnAchCompleted { /* CompltedButton */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 1118.5px;
+    top: -200px;
+
+    background: #287D1A;
+    border: 1px solid #000000;
+}
+
+.btnGuides { /* HowToGetButton */
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 1193px;
+    height: 65px;
+    left: 20px;
+    top: -183px;
+
+    background: #2E2E2E;
+    border: 1px solid #000000;
+}

@@ -39,7 +39,7 @@ use models\Users;
 
         <div class="header-global">
             <div class="logo-header">
-                <img src="" alt="">
+                <div style="display: flex;align-items: center;justify-content: center;height: 100%">PERFECTRUNS</div>
             </div>
             <div class="link-container">
                 <a class="link-header" href="http://perfectruns/">Main Page </a>
@@ -85,18 +85,18 @@ use models\Users;
 
             <div class="info">
                 <p>PerfectRuns</p>
-                <a class="footer-link" href="">All Games</a>
-                <a class="footer-link" href="">Profile</a>
+                <a class="footer-link" href="">link</a>
+                <a class="footer-link" href="">link</a>
             </div>
             <div class="info">
                 <p>PerfectRuns</p>
-                <a class="footer-link" href="">All Games</a>
-                <a class="footer-link" href="">Profile</a>
+                <a class="footer-link" href="">link</a>
+                <a class="footer-link" href="">link</a>
             </div>
             <div class="info">
                 <p>PerfectRuns</p>
-                <a class="footer-link" href="">All Games</a>
-                <a class="footer-link" href="">Profile</a>
+                <a class="footer-link" href="">link</a>
+                <a class="footer-link" href="">link</a>
             </div>
         </div>
 </footer>

@@ -17,13 +17,17 @@ $this->Title = "PerfectRuns";
 
 <div class="gamePages">
     <?php
-    use core\Core;
-    error_reporting(E_ERROR | E_PARSE);
-    $arrayGames = Core::get()->db->select('games', '*','');
-    foreach ($arrayGames as $game) {
-        echo ' <div class="game">' . '<div class="gameImage"></div>';
-        echo ' <div class="gameName">';
-        echo $game['name'] . '</div>' . '</div>';
-    }
-    ?>
+
+    use models\Games;
+
+    foreach (Games::getGamesNameAndPic() as $item) : ?>
+        <a class="gameLink" href="/games/gamePage/<?= $item[2] ?>">
+            <div class="gameMP">
+                <img src="<?= $item[1] ?>" class="image-game" alt="Image Not Found">
+                <div class="gameName"> <?= $item[0] ?></div>
+            </div>
+        </a>
+    <?php endforeach; ?>
+
+
 </div>
