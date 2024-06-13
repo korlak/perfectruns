@@ -29,6 +29,10 @@ class Model
     {
         Core::get()->db->delete(static::$tableName, $conditionAssocArray);
     }
+    public static function getAllTable()
+    {
+        return Core::get()->db->selectTable(static::$tableName);
+    }
     public static function findById($id)
     {
         $arr = Core::get()->db->select(static::$tableName, '*', [static::$primaryKey => $id]);
@@ -37,10 +41,6 @@ class Model
         } else{
             return null;
         }
-    }
-    public static function getAllTable($tableName)
-    {
-
     }
     public static function findByCondition($conditionAssocArray)
     {

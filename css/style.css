@@ -1,11 +1,23 @@
+
 body {
-    background-color: #FFFFFF;
     margin: 0;
     padding: 0;
+    background:  url("../images/mainBackground.png") no-repeat fixed ;
+    display: flex;
+    flex-direction: column; background-size: 100% 100%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    color: #D9D9D9;
+    font-family: Inter;
+
 }
 
-.page {
-    width: 1440px;
+main {
+    flex: 1;
     margin: 0 auto;
+    background-color: rgba(11,11,11,1);
 
+    width: 1400px;
 }

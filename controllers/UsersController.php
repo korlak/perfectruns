@@ -37,7 +37,7 @@ class UsersController extends Controller
         }
         return $this->render();
     }
-    public function  actionRegister()
+    public function actionRegister()
     {
         if($this->isPost) {
             $user = Users::FindByLogin($this->post->login);
@@ -58,7 +58,6 @@ class UsersController extends Controller
                 $this->addErrorMessage("Нікнейм не вказано");
             }
             if(!$this->isErrorMessageExistis()){
-                var_dump(Users::RegisterUser($this->post->login, $this->post->password, $this->post->nickname));
                 Users::RegisterUser($this->post->login, $this->post->password, $this->post->nickname);
                 return $this->redirect('/users/registersuccess');
             }

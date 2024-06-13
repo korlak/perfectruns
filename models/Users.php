@@ -43,9 +43,12 @@ class Users extends Model
             return true;
         }
     }
-    public static function userName()
+    public static function UserName()
     {
-       return Core::get()->session->get('user');
+        if(self::IsUserLogged()){
+            return Core::get()->session->get('user');
+        }
+        else return "";
     }
     public static function LoginUser($user)
     {

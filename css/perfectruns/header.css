@@ -1,25 +1,23 @@
+header{
+    width: 100%;
+    background: #111111;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: center ;
+}
 .header-global {
     font-family: Inter;
-    margin-left: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 1440px;
     height: 52px;
     background: #111111;
-
 }
-
-
-.logo {
+.logo-header {
     width: 200px;
     height: 50px;
     border: 1px dotted red;
-}
-
-.link-svg {
-    top: 3px;
-    position: relative;
 }
 
 
@@ -40,7 +38,7 @@
     /* Auto layout */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 10px;
     width: 650px;

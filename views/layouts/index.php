@@ -23,19 +23,22 @@ use models\Users;
     <link rel="stylesheet" href="../../css/perfectruns/header.css">
     <link rel="stylesheet" href="../../css/perfectruns/welcome.css">
     <link rel="stylesheet" href="../../css/perfectruns/gamesList.css">
+    <link rel="stylesheet" href="../../css/perfectruns/footer.css">
     <link rel="stylesheet" href="../../css/users/login.css">
     <link rel="stylesheet" href="../../css/users/profile.css">
+    <link rel="stylesheet" href="../../css/games/games.css">
+    <link rel="stylesheet" href="../../css/games/gamePage.css">
+    <link rel="stylesheet" href="../../css/admin/addGame.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <title><?= $Title ?></title>
 </head>
 <body>
-<div class="page">
+<header>
 
-    <header>
         <div class="header-global">
-            <div class="logo">
+            <div class="logo-header">
                 <img src="" alt="">
             </div>
             <div class="link-container">
@@ -45,6 +48,12 @@ use models\Users;
                 <a class="link-header" href="http://perfectruns/favorites">Favorites </a>
                 <a class="link-header" href="http://perfectruns/categories">Categories</a>
                 <a class="link-header" href="http://perfectruns/community">Community</a>
+                <?php
+                if (Users::IsUserLogged())
+                    if (Users::UserName()['login'] == 'admin') :
+                        ?>
+                        <a class="link-header" href="http://perfectruns/admin/index">admin</a>
+                    <?php endif; ?>
             </div>
             <?php if (!Users::IsUserLogged()) : ?>
                 <a class="sign-in" href="/users/login">
@@ -65,15 +74,32 @@ use models\Users;
                 </a>
             <?php endif; ?>
         </div>
-
-    </header>
-    <div>
+</header>
+<main>
+    <div class="Page">
         <?= $Content ?>
     </div>
-    <footer>
+</main>
+<footer>
+    <div class="footer">
 
-    </footer>
-</div>
+            <div class="info">
+                <p>PerfectRuns</p>
+                <a class="footer-link" href="">All Games</a>
+                <a class="footer-link" href="">Profile</a>
+            </div>
+            <div class="info">
+                <p>PerfectRuns</p>
+                <a class="footer-link" href="">All Games</a>
+                <a class="footer-link" href="">Profile</a>
+            </div>
+            <div class="info">
+                <p>PerfectRuns</p>
+                <a class="footer-link" href="">All Games</a>
+                <a class="footer-link" href="">Profile</a>
+            </div>
+        </div>
+</footer>
 
 </body>
 </html>

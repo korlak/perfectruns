@@ -1,19 +1,68 @@
-.login{
+.login {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 1440px;
-    height: 520px;
-    border: 1px solid red;
+    width: 1400px;
+
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     padding: 10px;
     gap: 10px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #D9D9D9;
+}
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Стиль при наведении */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль при фокусе */
+button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Стиль при активном состоянии */
+button[type="submit"]:active {
+    background-color: #004494;
 }
 /* login */
 

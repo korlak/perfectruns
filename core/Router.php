@@ -49,7 +49,7 @@ class Router
     public function error($code)
     {
         http_response_code($code);
-        echo $code;
+        header('Location: /views/site/page404.php');
         die;
     }
 }

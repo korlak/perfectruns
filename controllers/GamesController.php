@@ -11,4 +11,8 @@ class GamesController extends Controller
     {
         return $this->render();
     }
+    public function actionGamePage()
+    {
+        return $this->render('views/games/gamePage.php');
+    }
 }

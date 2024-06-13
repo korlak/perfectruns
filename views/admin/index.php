@@ -2,7 +2,7 @@
 use models\Users;
 use core\Controller;
 
-if(Users::userName()['login'] !== 'admin') {
+if(Users::UserName()['login'] !== 'admin') {
     return Controller::redirect('/');
 }
 else

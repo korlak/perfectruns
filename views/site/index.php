@@ -18,7 +18,8 @@ $this->Title = "PerfectRuns";
 <div class="gamePages">
     <?php
     use core\Core;
-    $arrayGames = Core::get()->db->select('games', '*', '');
+    error_reporting(E_ERROR | E_PARSE);
+    $arrayGames = Core::get()->db->select('games', '*','');
     foreach ($arrayGames as $game) {
         echo ' <div class="game">' . '<div class="gameImage"></div>';
         echo ' <div class="gameName">';

@@ -1,13 +1,11 @@
 .gamePages {
     font-family: 'Inter';
-    margin-left: 15px;
-    width: 1425px;
+    width: 1385px;
     padding-top: 15px;
     padding-left: 15px;
     height: 875px;
     background: #111111;
 
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
